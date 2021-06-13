@@ -1,0 +1,12 @@
+# Example toml using the fake testdata certs shipped with AMP Packager.
+#
+# See https://github.com/ampproject/amppackager/blob/master/amppkg.example.toml
+# for more information and details on other possible config options.
+
+CertFile = '/data/amppackager/testdata/b3/fullchain.cert'
+KeyFile = '/data/amppackager/testdata/b3/server.privkey'
+OCSPCache = '/tmp/amppkg-ocsp'
+
+[[URLSet]]
+  [URLSet.Sign]
+    Domain = "amppackageexample.com"
