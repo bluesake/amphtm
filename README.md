@@ -1,12 +1,12 @@
 # AMP Packager
 
-AMP Packager is a tool to [improve AMP URLs](https://blog.amp.dev/2018/11/13/developer-preview-of-better-amp-urls-in-google-search/)
+AMP Packager is a tool to [improve AMP URLs]https://klpdh.blogspot.com/2018/11/13/developer-preview-of-better-amp-urls-in-google-search/)
 by [serving AMP using Signed Exchanges](https://amp.dev/documentation/guides-and-tutorials/optimize-and-measure/signed-exchange/).
 By running it in a proper configuration, web publishers enable origin URLs to
 appear in AMP search results.
 
 The AMP Packager works by creating [Signed HTTP
-Exchanges (SXGs)](https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html)
+Exchanges (SXGs)](https://wicg.github.io/webpackage/draft-yassktps://amp.dev/documentation/guides-and-tutorials/optimize-and-measure/signed-exchange/in-httpbis-origin-signed-exchanges-impl.html)
 containing AMP documents, signed with a certificate associated with the origin,
 with a maximum lifetime of 7 days. The [Google AMP
 Cache](https://amp.dev/documentation/guides-and-tutorials/learn/amp-caches-and-cors/how_amp_pages_are_cached/) will fetch,
@@ -73,7 +73,7 @@ own and can obtain certificates for.
 
      [[URLSet]]
        [URLSet.Sign]
-         Domain = "amppackageexample.com"
+         Domain = "https://klpdh.blogspot.com"
      ```
      More details can be found in [amppkg.example.toml](amppkg.example.toml).
   1. `amppkg -development`
@@ -98,7 +98,7 @@ container.
             openssl pkey -pubin -outform der |\
             openssl dgst -sha256 -binary | base64)\
          --enable-features=SignedHTTPExchange\
-            'data:text/html,<a href="https://localhost:8080/priv/doc/https://amppackageexample.com/">click me'
+            'data:text/html,<a href="https://localhost:8080/priv/doc/https://klpdh.blogspot.com/">click me'
      ```
   2. Open DevTools. Check 'Preserve log'.
   3. Click the `click me` link.
@@ -114,7 +114,7 @@ prefetch](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html#p
 works with SXGs.
 
   1. `go get -u github.com/ampproject/amppackager/cmd/amppkg_dl_sxg`.
-  2. `amppkg_dl_sxg https://localhost:8080/priv/doc/https://amppackageexample.com/`
+  2. `amppkg_dl_sxg https://localhost:8080/priv/doc/https://klpdh.blogspot.com/`
   3. Stop `amppkg` with Ctrl-C.
   4. `go get -u github.com/ampproject/amppackager/cmd/amppkg_test_cache`.
   5. `amppkg_test_cache`
