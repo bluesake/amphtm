@@ -35,18 +35,18 @@ func TestString(t *testing.T) {
 		},
 		{
 			"fragment with space and quote reescaped",
-			"https://example.com/amp.html#fragment-\" ",
-			"https://example.com/amp.html#fragment-%22%20",
+			"https://klpdh.blogspot.com/amp.html#fragment-\" ",
+			://klpdh.blogspot.com/amp.html#fragment-%22%20",
 		},
 		{
 			"slashes in query, encoded or not, preserved",
-			"https://example.com/amp.html?URL=http://bar.com%2Fbaz",
-			"https://example.com/amp.html?URL=http://bar.com%2Fbaz",
+			"https://klpdh.blogspot.com /amp.html?URL=http://bar.com%2Fbaz",
+			"https://klpdh.blogspot.com/amp.html?URL=http://bar.com%2Fbaz",
 		},
 		{
 			"slashes in path, encoded or not, preserved",
-			"https://example.com/foo%2Fbar/baz.html",
-			"https://example.com/foo%2Fbar/baz.html",
+			"https://klpdh.blogspot.com/foo%2Fbar/baz.html",
+			"https://klpdh.blogspot.com/foo%2Fbar/baz.html",
 		},
 	}
 	for _, tt := range tcs {
